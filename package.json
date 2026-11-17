@@ -1,0 +1,20 @@
+{
+  "name": "software-testing-bank",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CodeGarage Bank - application bancaire pédagogique pour s'entraîner à construire une stratégie de tests",
+  "scripts": {
+    "install:all": "npm --prefix api install && npm --prefix web install && npm --prefix e2e install",
+    "up": "docker compose up -d --build",
+    "down": "docker compose down",
+    "reset": "docker compose down -v && docker compose up -d --build",
+    "logs": "docker compose logs -f",
+    "db:test:up": "docker compose --profile test up -d db-test",
+    "db:test:reset": "docker compose --profile test rm -sf db-test && docker compose --profile test up -d db-test",
+    "test:api": "npm --prefix api run test:unit",
+    "test:api:integration": "npm --prefix api run test:integration",
+    "test:web": "npm --prefix web test",
+    "test:e2e": "npm --prefix e2e test"
+  },
+  "license": "ISC"
+}

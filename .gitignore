@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+.env
+
+# Playwright
+e2e/test-results/
+e2e/playwright-report/
+e2e/blob-report/
+
+# Corrigé formateur : ne jamais publier
+instructor/
+
+.DS_Store
+Thumbs.db
